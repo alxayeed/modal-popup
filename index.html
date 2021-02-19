@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>modal</title>
+</head>
+
+<body class="">
+
+    <button id="open" class="">
+        Click me
+    </button>
+
+
+    <div class="modal-container">
+        <div class="modal">
+            <h1>I am the Modal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis maiores doloremque deserunt esse
+                error praesentium ad numquam nihil labore, ullam dolore deleniti, voluptate aliquid omnis ducimus,
+                laudantium illo accusantium dolorum!</p>
+            <button id="close">Close me</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const openBtn = document.getElementById('open')
+    const modal_container = document.querySelector('.modal-container')
+    const closeBtn = document.getElementById('close')
+
+    openBtn.addEventListener('click', () => {
+        modal_container.classList.add('show')
+    })
+
+    closeBtn.addEventListener('click', () => {
+        modal_container.classList.remove('show')
+    })
+</script>
